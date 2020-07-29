@@ -13,7 +13,7 @@ class Home: UITableViewController {
     @IBOutlet var tableview: UITableView!
     
     
-    let todoitem = ["go and pickup the bandages", "go out and buy some fruits"]
+    var todoitem = ["go and pickup the bandages", "go out and buy some fruits"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,14 +48,50 @@ class Home: UITableViewController {
         print(todoitem[indexPath.row])
         
         if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
-            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-        }else{
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
+        }else{
+            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         }
         
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    
+    @IBAction func add_todo(_ sender: UIBarButtonItem) {
+        
+        var task = UITextField()
+        
+        
+        let alert = UIAlertController(title: "add ToDo", message: "please add your actions or work", preferredStyle: UIAlertController.Style.alert)
+        
+        
+        let action = UIAlertAction(title: "Add In Your Task", style: .default) { (action) in
+            
+            let newtask = task.text! as String
+            
+            DispatchQueue.main.async {
+                self.todoitem.append(newtask)
+                self.tableview.reloadData()
+            }
+            
+           
+        }
+        
+        alert.addTextField { (alerttextfiled) in
+            alerttextfiled.placeholder = "Add your Task here"
+
+           task = alerttextfiled
+            
+        }
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
+    
     
     /*
     // Override to support conditional editing of the table view.

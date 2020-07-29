@@ -29,7 +29,14 @@
                             <outlet property="delegate" destination="RHK-Wp-Ypf" id="Re5-uD-Fb2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="oXe-9j-t2T"/>
+                    <navigationItem key="navigationItem" id="oXe-9j-t2T">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="6BA-MB-npv">
+                            <color key="tintColor" red="0.97929324809999996" green="0.0058533428409999998" blue="0.36296436669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="add_todo:" destination="RHK-Wp-Ypf" id="b9I-d6-Amg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="CYZ-g0-hij" id="zTQ-WE-5BW"/>
                     </connections>
@@ -57,4 +64,7 @@
             <point key="canvasLocation" x="772.46376811594212" y="159.375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>
