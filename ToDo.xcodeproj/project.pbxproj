@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1877300B24D3C778004FBB39 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877300A24D3C778004FBB39 /* Item.swift */; };
 		18DFC8AA24CF129500803B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFC8A924CF129500803B41 /* AppDelegate.swift */; };
 		18DFC8AC24CF129500803B41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DFC8AB24CF129500803B41 /* SceneDelegate.swift */; };
 		18DFC8B124CF129500803B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DFC8AF24CF129500803B41 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1877300A24D3C778004FBB39 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		18DFC8A624CF129500803B41 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DFC8A924CF129500803B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DFC8AB24CF129500803B41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1877300924D3C756004FBB39 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1877300A24D3C778004FBB39 /* Item.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		18DFC89D24CF129500803B41 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 			children = (
 				18DFC8A924CF129500803B41 /* AppDelegate.swift */,
 				18DFC8AB24CF129500803B41 /* SceneDelegate.swift */,
+				1877300924D3C756004FBB39 /* model */,
 				18DFC8DF24CF13EA00803B41 /* view */,
 				18DFC8DE24CF13E200803B41 /* controller */,
 				18DFC8B524CF129800803B41 /* Assets.xcassets */,
@@ -278,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1877300B24D3C778004FBB39 /* Item.swift in Sources */,
 				18DFC8AA24CF129500803B41 /* AppDelegate.swift in Sources */,
 				18DFC8AC24CF129500803B41 /* SceneDelegate.swift in Sources */,
 				18DFC8DD24CF13C400803B41 /* Home.swift in Sources */,
